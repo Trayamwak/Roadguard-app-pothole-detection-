@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "PotHoleRadar",
+    "slug": "pothole-radar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "pothole-radar",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0B0B0B",
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "PotHoleRadar uses the camera to photograph road damage for a report.",
+        "NSPhotoLibraryUsageDescription": "PotHoleRadar uses photos you choose to document a pothole.",
+        "NSLocationWhenInUseUsageDescription": "PotHoleRadar uses your location to place a pothole report and center the map.",
+        "NSMotionUsageDescription": "Drive Mode checks motion while the app is open to detect possible potholes."
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "config": {}
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "PotHoleRadar uses the camera to photograph road damage for a report."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "PotHoleRadar lets you choose a photo to document road damage."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#E10600"
+        }
+      ],
+      "expo-sharing"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

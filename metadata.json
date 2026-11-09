@@ -1,0 +1,6 @@
+{
+  "name": "Roadguard - Local AI Pothole Radar",
+  "description": "On-device AI road hazard scanner with local storage, real-time severity detection, safe routing, and offline scan history.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

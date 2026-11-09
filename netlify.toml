@@ -1,0 +1,35 @@
+# Netlify build and redirect configuration for Roadguard
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirect API requests to Netlify serverless functions when deployed on Netlify
+[[redirects]]
+  from = "/api/scan"
+  to = "/.netlify/functions/scan"
+  status = 200
+
+[[redirects]]
+  from = "/scan"
+  to = "/.netlify/functions/scan"
+  status = 200
+
+[[redirects]]
+  from = "/health"
+  to = "/.netlify/functions/health"
+  status = 200
+
+[[redirects]]
+  from = "/healthz"
+  to = "/.netlify/functions/health"
+  status = 200
+
+# Client-Side Routing: redirect all remaining routes to index.html with HTTP 200 (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

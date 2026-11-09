@@ -1,0 +1,6 @@
+# SPA fallback for Netlify
+/api/scan    /.netlify/functions/scan    200
+/scan        /.netlify/functions/scan    200
+/health      /.netlify/functions/health  200
+/healthz     /.netlify/functions/health  200
+/*           /index.html                 200
